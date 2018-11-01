@@ -24,7 +24,6 @@ var GamePlayManagerDesktop = {
     },
     create: function(){
         /********************************Materiales del juego*******************************************/
-        console.log('entro desktop');
         game.physics.startSystem(Phaser.Physics.P2JS);
         game.physics.p2.gravity.y = GRAVEDAD_Y;
         this.worldMaterial = game.physics.p2.createMaterial('worldMaterial');
@@ -40,7 +39,7 @@ var GamePlayManagerDesktop = {
         this.basureros=[];
         
         //Fondo 
-        var fondo = game.add.sprite(0,0,'fondoLimpio');
+        var fondo = game.add.sprite(0,0,'fondoDesktop');
         fondo.width = window.innerWidth;
         fondo.height = window.innerHeight;
 
@@ -486,6 +485,8 @@ var GamePlayManager = {
     preload: function(){
         //Fondo
         game.load.image('fondoLimpio','assets/img/fondo/fondo_limpio.png');
+        game.load.image('fondoDesktop','assets/img/fondo/fondoPC.png');
+        
         //Plataformas sprites
         game.load.image('platLimpio0','assets/img/plataformas/platLimpio0.png');
         game.load.image('platLimpio1','assets/img/plataformas/platLimpio1.png');
